@@ -2,8 +2,6 @@ from django.db import models
 
 # Create your models here.
 
-
-
 # Category class 
 class Category(models.Model):
     name = models.CharField(max_length=50)

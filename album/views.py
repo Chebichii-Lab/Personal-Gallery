@@ -1,5 +1,9 @@
+from album.models import Image, Location
 from django.shortcuts import render
 
 # Create your views here.
 def album(request):
-    return render(request, 'album.html')
+    images = Image.objects.all()
+    locations = Location.get_locations()
+    print(locations)
+    return render(request, 'album.html', {'images': images[::-1], 'locations': locations})
