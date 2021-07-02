@@ -2,30 +2,34 @@ from django.db import models
 
 # Create your models here.
 
-# Image class
-class Image(models.Model):
-    image = models.ImageField(upload_to='images/')
-    name = models.CharField(max_length=100)
-    description = models.TextField()
-    # category = models.ForeignKey()
-    # location = models.ForeignKey()
+
 
 # Category class 
 class Category(models.Model):
     name = models.CharField(max_length=50)
 
-#     def __str__(self):
-#         return self.name
+    def __str__(self):
+        return self.name
 
-#     def save_category(self):
-#         self.save()
+    def save_category(self):
+        self.save()
 
-#     def delete_category(self):
-#         self.delete()
+    def delete_category(self):
+        self.delete()
 
 # Location class
 class Location(models.Model):
     name = models.CharField(max_length=100)
+
+
+# Image class
+class Image(models.Model):
+    image = models.ImageField(upload_to='images/')
+    name = models.CharField(max_length=100)
+    description = models.TextField()
+    category = models.ForeignKey( Category, on_delete=models.CASCADE , default='0')
+    location = models.ForeignKey( Location, on_delete=models.CASCADE , default='0')
+
 
     
 
