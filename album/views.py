@@ -1,3 +1,4 @@
+from django.http.response import Http404
 from album.models import Image, Location
 from django.shortcuts import render
 
@@ -20,3 +21,11 @@ def search(request):
     else:
         message = "You haven't searched for any images in that category"
         return render(request, 'search.html',{"message":message})
+
+
+def image(request,image_id):
+    try:
+        image = Image.objects.get(id = image_id)
+    except Exception:
+        raise Http404()
+    return render(request,"images.html", {"image":image})
