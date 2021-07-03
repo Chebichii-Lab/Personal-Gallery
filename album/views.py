@@ -30,8 +30,8 @@ def image(request,image_id):
         raise Http404()
     return render(request,"images.html", {"image":image})
 
-def location_img(request, location):
+def location_image(request, location):
     images = Image.filter_by_location(location)
-    return render(request, 'location.html', {'location_img': images})
+    return render(request, 'location.html', {'location_image': images})
 
 
