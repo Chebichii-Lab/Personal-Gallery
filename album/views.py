@@ -8,7 +8,7 @@ def album(request):
     print(locations)
     return render(request, 'album.html', {'images': images[::-1], 'locations': locations})
 
-def search_results(request):
+def search_result(request):
 
     if 'imagesearch' in request.GET and request.GET["imagesearch"]:
         category = request.GET.get("imagesearch")

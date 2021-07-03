@@ -6,6 +6,6 @@ from django.conf.urls.static import static
 
 urlpatterns=[
     url(r'^$',views.album,name='album'),
-    
+    url(r'^search/', views.search_result, name='search'),
    
 ]
