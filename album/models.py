@@ -48,8 +48,8 @@ class Image(models.Model):
 
     @classmethod
     def filter_by_location(cls, location):
-        image_location = Image.objects.filter(location__name=location).all()
-        return image_location
+        location = Image.objects.filter(location__name=location).all()
+        return location
 
     @classmethod
     def update_image(cls, id, value):

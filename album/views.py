@@ -29,3 +29,10 @@ def image(request,image_id):
     except Exception:
         raise Http404()
     return render(request,"images.html", {"image":image})
+
+def location(request, location):
+    images = Image.filter_by_location(location)
+    print(images)
+    return render(request, 'location.html', {'location_images': images})
+
+
