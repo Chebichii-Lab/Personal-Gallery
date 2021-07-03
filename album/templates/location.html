@@ -3,6 +3,7 @@
 {% block content %}
 
 {%for location in location_image%}
+
 Images in {{location.location}}
 <div class="col-md-3 mb-3">
 
@@ -12,7 +13,7 @@ Images in {{location.location}}
         <!--Card image-->
         <div class="view overlay">
             <a data-toggle="modal" data-target="#pic">
-                <img src="{{location.image.url}}" class="card-img-top img-responsive styled" alt=" image" width="100px" height="100px">
+                <img src="{{location.image.url}}" class="card-img-top img-responsive styled" alt=" image" width="200px" height="200px">
 
             </a>
         </div>
