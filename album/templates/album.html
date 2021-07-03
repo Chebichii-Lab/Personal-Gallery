@@ -3,19 +3,36 @@
 {% block content %}
 {{block.super}}
 
-<div class="container">
+<div class="container" id="background">
     <div id="prog">
-        <h1>NATTY PICS</h1>
+        <h1 style="text-align:center; font-size:30px">NATTY PICS</h1>
     </div>
     <div id="opennote">
 
-        <h3>Hello, my name is Natasha Serem,</h3>
-        <p id="opennote"> Welcome to Natty Pics!!</p>
+        <h3 style="text-align:center;">Hello, my name is Natasha Serem,</h3>
+        <p id="opennote" style="text-align:center;"> Welcome to Natty Pics!!</p>
     </div>
     </br>
 
 </div>
+<div class="container">
+
+    <div class="row">
+        {% for image in images %}
+        <div class="col-md-4">
+            <img src="{{image.image.url}}" class="img-responsive" alt="" height=200px width="250px">
+        </div>
+        {% endfor %}
+    </div>
+
+    <div class="row">
+        <h1 class="text-center">{{image.name}}</h1>
+    </div>
+
+    <div class="row">
+        <p>{{image.description}}</p>
+    </div>
+
+</div>
 
 {% endblock %}
-
-    
