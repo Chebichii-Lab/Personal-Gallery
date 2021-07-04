@@ -7,27 +7,38 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
 
-<div class="container" id="background">
+<style>
+    #background{
+        background-image: url('/static/conor-luddy-IVaKksEZmZA-unsplash.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position:center center;
+    }
+</style>
+<div id="background">
     <div id="prog">
-        <h1 style="text-align:center; font-size:60px; font-family: 'Dancing Script', cursive; font-weight:bold;">NATTY PICS</h1>
+        <h1 style="text-align:center; font-size:60px; font-family: 'Dancing Script', cursive; font-weight:bold;">NATTY
+            PICS</h1>
     </div>
     <div id="opennote">
 
         <h3 style="text-align:center;">Hello, my name is Natasha Serem,</h3>
-        <p id="opennote" style="text-align:center; font-family: 'Dancing Script', cursive; font-size: 50px;"> Welcome to Natty Pics!!</p>
+        <p id="opennote" style="text-align:center; font-family: 'Dancing Script', cursive; font-size: 50px;"> Welcome to
+            Natty Pics!!</p>
     </div>
     </br>
 
-</div>
-<div class="row">
-    {% for location in locations %}
-    <!-- <div class="col-md-4"> -->
-        <a class="btn btn-outline-info btn-sm" id="btn" href="/location/{{location.name}}" style="font-size: 20px; text-align: center;">{{location.name}}</a>
+
+    <div class="row">
+        {% for location in locations %}
+        
+        <a class="btn btn-danger btn-sm" id="btn" href="/location/{{location.name}}"
+            style="font-size: 20px; text-align: center;">{{location.name}}</a>
         {%endfor%}
-    <!-- </div> -->
-</div>
-<br>
-<div class="container">
+       
+    </div>
+    <br>
+
     <div class="row">
         {% for image in images %}
         <div class="col-md-4">
@@ -84,4 +95,5 @@
         </div>
         {% endfor %}
     </div>
-    {% endblock %}
+</div>
+{% endblock %}
