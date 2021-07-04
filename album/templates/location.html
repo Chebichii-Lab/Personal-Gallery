@@ -4,24 +4,27 @@
 
 {%for location in location_image%}
 
-Images in {{location.location}}
-<div class="container">
-    <div class="row">
-        <div class="col-md-3">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
 
-            <!--Card-->
-            <div class="card">
+<h3 style="font-size: 30px;font-family: 'Dancing Script', cursive;">Images in {{location.location}}</h3>
+<div class="container" id="background">
+    <div class="row">
+
+        <!--Card-->
+        <div class="card-columns col-md-4">
 
             <!--Card image-->
             <div class="view overlay">
                 <a data-toggle="modal" data-target="#pic">
-                    <img src="{{location.image.url}}" class="card-img-top" alt=" image" width="150px" height="150px">
+                    <img src="{{location.image.url}}" class="card-img-top" alt=" image" width="250px" height="300px">
 
                 </a>
             </div>
-            </div>
-            {% endfor %}
         </div>
+        {% endfor %}
     </div>
+</div>
 </div>
 {% endblock %}
