@@ -15,15 +15,15 @@
         background-position:center center;
     }
 </style>
-<div id="background">
+<div class="container" id="background">
     <div id="prog">
-        <h1 style="text-align:center; font-size:60px; font-family: 'Dancing Script', cursive; font-weight:bold;">NATTY
+        <h1 style="text-align:center; font-size:60px; font-family: 'Dancing Script', cursive; font-weight:bold; color: white;">NATTY
             PICS</h1>
     </div>
     <div id="opennote">
 
-        <h3 style="text-align:center;">Hello, my name is Natasha Serem,</h3>
-        <p id="opennote" style="text-align:center; font-family: 'Dancing Script', cursive; font-size: 50px;"> Welcome to
+        <h3 style="text-align:center; color: white;">Hello, my name is Natasha Serem,</h3>
+        <p id="opennote" style="text-align:center; font-family: 'Dancing Script', cursive; font-size: 50px; color: white;"> Welcome to
             Natty Pics!!</p>
     </div>
     </br>
@@ -33,7 +33,7 @@
         {% for location in locations %}
         
         <a class="btn btn-danger btn-sm" id="btn" href="/location/{{location.name}}"
-            style="font-size: 20px; text-align: center;">{{location.name}}</a>
+            style="font-size: 15px; text-align: center;">{{location.name}}</a>
         {%endfor%}
        
     </div>
@@ -43,8 +43,8 @@
         {% for image in images %}
         <div class="col-md-4">
             <img src="{{image.image.url}}" alt="Image" class="img-thumbnail" data-toggle="modal"
-                data-target="#{{image.id}}">
-            <p>{{image.description}}</p>
+                data-target="#{{image.id}}" width="350px" height="200px">
+            <p style="color: white; font-size: 20px;">{{image.description}}</p>
             <!-- Modal -->
             <div id="{{image.id}}" class="modal fade" role="dialog">
                 <div class="modal-dialog image">
