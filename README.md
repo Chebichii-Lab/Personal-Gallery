@@ -7,7 +7,7 @@ Natasha Serem
 This is a Django application of a Personal Gallery where a user can view pictures of a certain category, see the location of the picture and also copy the link of the picture they like.
 
 ## SetUp and Installations
-To get the code, clone the repository:
+To get the code, clone the repository:  https://github.com/Chebichii-Lab/Personal-Gallery.git
 Move to the folder and run the following commands;
 
     $ cd Personal-Gallery
