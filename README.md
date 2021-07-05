@@ -40,6 +40,7 @@ Open the following host on your browser 127.0.0.1:8000
 3. Git
 
 # Live Link
+View [live](https://nattypics.herokuapp.com/).
 
 ## License
 The project is under the [MIT](LICENSE) license.
