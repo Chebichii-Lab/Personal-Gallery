@@ -15,6 +15,18 @@ import django_heroku
 import dj_database_url
 from decouple import config,Csv
 
+
+from pathlib import Path
+import cloudinary
+import cloudinary.uploader
+import cloudinary.api
+
+cloudinary.config(
+  cloud_name = "natty-pics",
+  api_key = "124635669382139",
+  api_secret = "4xqHBYqKLwLtaKZUL_DV2ON-pxs",
+  secure = True
+)
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -25,6 +37,8 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # SECURITY WARNING: keep the secret key used in production secret!
 
 # SECRET_KEY= '342s(s(!hsjd998sde8$=o4$3m!(o+kce2^97kp6#ujhi'
+
+
 MODE=config("MODE", default="dev")
 SECRET_KEY = config('SECRET_KEY')
 DEBUG = config('DEBUG', default=False, cast=bool)
@@ -67,6 +81,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'album.apps.AlbumConfig',
     'bootstrap3',
+    'cloudinary',
 ]
 
 MIDDLEWARE = [
